@@ -1,0 +1,347 @@
+*
+{   
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.background
+{
+    background-color: #222433;
+    width: 100%;
+    min-height: 5rem;
+}
+
+.grid1
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 5rem;
+}
+
+.test 
+{   
+    grid-row-start: 1;
+    grid-column-start: 1;
+    display: grid; 
+}
+
+.test2
+{   
+    grid-row-start: 1;
+    grid-column-start: 2;
+    display: grid; 
+}
+
+i
+{
+    display: none;
+}
+
+.Left
+{
+    color: #FFF;
+    display: grid; 
+    place-items: end start;
+    font-size: calc(60% + 0.5rem);
+}
+
+.Left2
+{
+    color: #FFF;
+    display: grid; 
+    place-items: start;
+    font-size: calc(60% + 0.1rem);
+}
+
+.nav
+{
+    display: grid; 
+    place-items: center end;
+}
+.nav-item
+{
+    padding: 0 1rem;
+}
+
+.background2
+{
+    background-image: url('../images/test.jpg');
+    background-size: cover; 
+    width: 100%; 
+    height: auto;
+    background-attachment: fixed;
+}
+
+.grid2
+{
+    display:grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.TextText
+{
+    color: #FFF; 
+    font-size: calc(60% + 2.5rem);
+    margin: 7rem 0;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgb(0, 26, 255), 0 0 1em rgb(1, 1, 134), rgb(0, 0, 160)0.2em blue;
+}
+.buttonLayout
+{    
+    margin: 0 9rem;
+    margin-top: 2rem;
+}
+
+.boxButton
+{
+    width: 13rem;
+}
+
+.text
+{
+    display: grid; 
+    place-items: start;
+    margin-top: 7.5rem;
+    font-size: calc(10% + 2rem);
+    color: #FFF;
+    font-weight: 600;
+}
+
+.layoutSearch
+{
+    display : grid;
+    place-items: start;
+}
+
+.search
+{   
+    display: grid; 
+    place-items: center;
+    width: 50rem;
+    min-height: 2.5rem;
+    border-radius: 20px;
+    padding-left: 20px;
+    background-color: #222433;
+    border: none;
+    color: #FFF;
+}
+
+
+.background3
+{
+    background: rgb(32, 39, 80);
+    background: linear-gradient(180deg, #292b3f , rgb(37, 42, 69) 100%);
+    background-size: cover; 
+    width: 100%; 
+    min-height: 100vh;
+}
+
+
+.grid3
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+.info 
+{
+    margin-top: 4rem;
+    color: #FFF;
+    font-weight: 600;
+    font-size: calc(80% + 1rem);
+}
+
+.line 
+{
+    max-width: 60rem; 
+    min-height: 0.05rem;
+    background-color: #fff;
+    margin-top: 1.5rem;
+}
+
+.detail
+{   
+    line-height: 2.5rem;
+    font-size: calc(60% + 0.4rem);
+    margin-top: 2rem;
+    color: #FFF;
+}
+
+.detail2
+{   
+    line-height: 2.8rem;
+    font-size: calc(60% + 0.4rem);
+    color: #FFF;
+}
+
+.gridImage
+{   
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+img 
+{
+    object-fit: cover;
+    object-position: center;
+}
+.imageGrid
+{   
+    max-width: 30rem;
+    margin-top: 3rem;
+    
+}
+
+.imageGrid2
+{   
+    margin-left : 10rem; 
+    max-width: 25rem;
+    margin-top: 3rem;
+    
+}
+
+
+.infoCheck
+{
+    color: #FFF;
+    margin-top: 4rem;
+    font-size: calc(60% + 1.2rem);
+    font-weight: 600;
+}
+
+
+.linecir
+{   
+    background-color: rgba(41, 150, 185, 1);
+    max-width: 80%;
+    margin-top: 2.5rem;
+    border-radius: 2rem;
+    min-height: 0.2rem;
+}
+
+.grid4
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+.gridImage2
+{
+    display: grid; 
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+.gridText
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin-top: 5rem;
+}
+
+.infoText
+{   
+    font-size: calc(60% + 1rem);
+    color: #FFF;
+    font-weight: 600;
+}
+
+.gridBootstrap
+{
+    display : grid; 
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+.card
+{
+    margin-top: 3rem;
+}
+
+.background4
+{   
+    margin-top: 2rem;
+    background-color: #1a3a56;
+    background-size: cover; 
+    width: 100%; 
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+.gridCardBootstrap
+{
+    display : grid; 
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+
+}
+
+
+.gridTextCard
+{
+    display : grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+.textCard
+{
+    margin-top: 4rem;
+    color: #FFF;
+    font-weight: 600;
+    font-size: calc(60% + 1rem);
+}
+
+.gridlastCard
+{
+    display:grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    
+}
+
+.textlastCard
+{
+    color: #FFF; 
+    font-size: calc(60% + 0.5rem);
+    margin-top: 1rem;
+}
+
+.background5
+{
+    background: rgb(32, 39, 80);
+    background: linear-gradient(180deg, #292b3f , rgb(37, 42, 69) 100%);
+    background-size: cover; 
+    width: 100%; 
+    height: auto;
+    padding-bottom: 4rem;
+}
+
+.gridLastCheck
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    
+}
+
+.infoLast
+{   
+    margin-top: 4rem;
+    color: #FFF;
+    display: grid; 
+    place-items: center start;
+    font-size: calc(60% + 0.6rem);
+}
+
+.card-text
+{
+    font-size: calc(40% + 0.6rem);
+    line-height: 2.5rem;
+}

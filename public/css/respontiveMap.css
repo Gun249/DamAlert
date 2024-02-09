@@ -1,0 +1,111 @@
+
+@media screen and (max-width: 992px) 
+{   
+    .grid5
+    {
+        grid-template-columns: auto auto auto;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    } 
+
+    .container3
+    {
+        width: 40rem;
+    }
+    #map
+    {
+        margin-top: 1rem;
+        width: 40rem;
+        height: 25rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) 
+{   
+    .grid6
+    {
+        display:grid; 
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    .gridLeft
+    {   
+        display: grid; 
+        grid-template-columns: auto;
+        place-items: center;
+    }
+
+    .gridRight
+    {   
+        display: grid; 
+        grid-template-columns: auto;
+        place-items: center;
+        margin-top: 1rem;
+    }
+
+    .grid5
+    {
+        grid-template-columns: auto;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    } 
+
+    .buttonLayout
+    {    
+        margin: 0 2rem;
+        margin-top: 1rem;
+    }
+
+    .boxButton
+    {
+        width: 13rem;
+    }
+
+
+    .search
+    {   
+        width: 25rem; 
+    }
+
+    .container3
+    {
+        width: 25rem;
+    }
+
+    #map
+    {
+        margin-top: 1rem;
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width: 468px) 
+{   
+    .search
+    {   
+        width: 20rem; 
+    }
+
+
+    .test2
+    {   
+        display: none;
+    }
+
+    .container3
+    {
+        width: 20rem;
+    }
+
+
+    #map
+    {
+        margin-top: 1rem;
+        width: 20rem;
+        height: 20rem;
+    }
+}
+

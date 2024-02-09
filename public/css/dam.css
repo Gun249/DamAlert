@@ -1,0 +1,413 @@
+*
+{   
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.background
+{
+    background-color: #222433;
+    width: 100%;
+    min-height: 5rem;
+    
+}
+
+
+.grid1
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 5rem;
+}
+
+.test 
+{   
+    grid-row-start: 1;
+    grid-column-start: 1;
+    display: grid; 
+}
+
+.test2
+{   
+    grid-row-start: 1;
+    grid-column-start: 2;
+    display: grid; 
+}
+
+i
+{
+    display: none;
+}
+
+.Left
+{
+    color: #FFF;
+    display: grid; 
+    place-items: end start;
+    font-size: calc(60% + 0.5rem);
+}
+
+.Left2
+{
+    color: #FFF;
+    display: grid; 
+    place-items: start;
+    font-size: calc(60% + 0.1rem);
+}
+
+.nav
+{
+    display: grid; 
+    place-items: center end;
+}
+
+.nav-item
+{
+    padding: 0 1rem;
+}
+
+.background2
+{
+    background-color: #2c2e42;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding-bottom: 8rem;
+}
+
+.gridCenter
+{
+    display: grid; 
+    grid-template-columns: 50% 50%;
+    grid-row: auto;
+}
+
+.grid_1
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    margin-left: 6rem;
+}
+
+.infoText
+{
+    color: #FFF;
+    font-size: calc(60% + 1.2rem);
+    font-weight: 600;
+    margin-top: 8rem;
+    line-height: 3rem;
+}
+
+.detailText
+{
+    color: #FFF;
+    margin-top: 1rem;
+    line-height: 2.2rem;
+}
+
+.line 
+{
+    max-width: 80%;
+    background-color: #FFF;
+    min-height: 0.05rem;
+    margin-top: 1.2rem;
+    border-radius: 5rem;
+}
+
+.boxButton
+{   
+    width: 13rem;
+    margin-top: 1.2rem;
+    height: 2.5rem;
+    margin-bottom: 11rem;
+}
+
+.imageTest
+{
+    max-width: 30rem;
+    margin-left: 6rem;
+}
+
+.gridT
+{
+    display: grid; 
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+.cardMake
+{
+    background-color: #2f3143;
+    background-size: cover; 
+    width: 16rem;
+    height: 13rem;
+}
+
+.cardMake:hover , .cardMake2:hover , .cardMake3:hover , .cardMake4:hover
+{
+    box-shadow: -1px 8px 51px 7px rgba(95,220,255,0.77);
+-webkit-box-shadow: -1px 8px 51px 7px rgba(95,220,255,0.77);
+-moz-box-shadow: -1px 8px 51px 7px rgba(95,220,255,0.77);
+    transition: 0.8s ease-in-out;
+    transform: scale(1.035); 
+}
+
+.gridTT
+{
+    display: grid; 
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+}
+
+.textHead
+{
+    color: #FFF;
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+    font-size: calc(60% + 0.5rem);
+    font-weight: 600;
+}
+
+.lineHead
+{
+    background-color: #00FFE0;
+    min-height: 0.3rem;
+    width: 10rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.2rem;
+}
+
+
+.lineHead2
+{
+    background-color: #00FFE0;
+    min-height: 0.1rem;
+    width: 10rem;
+    margin: 0 auto;
+    border-radius: 0.2rem;
+    margin-top: 0.8rem;
+    
+}
+
+.detailHead 
+{
+    color: #FFF; 
+    margin: 0 1rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    font-size: calc(60% + 0.3rem);
+}
+
+
+.grid3_1T
+{
+    display: grid; 
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    place-items: center;
+}
+
+
+.cardMake2
+{
+    background-color: #2f3143;
+    background-size: cover; 
+    width: 60%;
+    height: auto;
+    margin-top: 4rem;
+}
+
+
+.cardMake3
+{
+    background-color: #2f3143;
+    background-size: cover; 
+    width: 80%;
+    height: 13rem;
+    margin-top: 4rem;
+}
+
+.cardMake4
+{
+    background-color: #2f3143;
+    background-size: cover; 
+    width: 80%;
+    height: auto;
+    margin-top: 4rem;
+}
+
+.cardMake5
+{
+    background-color: #2f3143;
+    background-size: cover; 
+    width: 80%;
+    height: auto;
+}
+
+.imageTest2
+{   
+    margin-top: 5rem;
+    width: 20rem;
+}
+
+.grid5
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    place-items: center;
+}
+
+
+.line2
+{   
+    display: grid; 
+    place-items: center;
+    background-color: #00FFE0;
+    min-height: 0.2rem;
+    width: 50%;
+    margin-left: 1rem;
+    margin-top: 3rem;
+    border-radius: 0.2rem;
+}
+
+.lineHead3
+{
+    display: grid; 
+    place-items: center;
+    background-color: #00ffe1b8;
+    min-height: 0.3rem;
+    width: 80%;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+}
+
+.grid6
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin-top: 2rem;
+}
+
+.detailHead3
+{
+    color: #FFF; 
+    margin: 0 1rem;
+    line-height: 2rem;
+    margin-top: 3rem;
+    font-size: calc(60% + 0.6rem);
+}
+
+.grid6-1
+{
+    display: grid; 
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+.grid7
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+
+.imageTest3
+{
+    display: grid; 
+    margin-top: 3rem;
+    margin-left: 3rem;
+    width: 60%;
+    place-items: center;
+}
+
+.grid8
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.grid9
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+}
+
+.textDetailCheck
+{
+    color: #FFF; 
+    font-size: calc(60% + 0.5rem);
+    font-weight: 600;
+    margin-left: 2rem; 
+    margin-top: 2rem;
+}
+
+
+.background5
+{
+    background-color: #2c2e42;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+
+.gridLastCheck
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    
+}
+
+.infoLast
+{   
+    margin-top: 4rem;
+    color: #FFF;
+    display: grid; 
+    place-items: center start;
+    font-size: calc(60% + 0.6rem);
+}
+.gridRealReal
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    place-items: center;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+select 
+{
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition:  0.3s ease-in-out;
+    width: 30%;
+}
+  
+select:focus 
+{
+    transition:  0.3s ease-in-out;
+    outline: none;
+    border-color: #007bff;
+}
+
+.textHead5
+{
+    color: #FFF;
+    margin-top: 1.2rem;
+    font-size: calc(60% + 0.5rem);
+    font-weight: 600;
+    place-items: start;
+    margin-bottom: 1rem;
+}

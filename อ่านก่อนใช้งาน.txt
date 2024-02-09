@@ -1,0 +1,3 @@
+1.พิมคำสั่ง npm i ใน terminal ใน vscode
+2. พิมคำสั่ง npm start ใน terminal ใน vscode
+3.เข้าเว็บด้วย http://localhost:3000/Main

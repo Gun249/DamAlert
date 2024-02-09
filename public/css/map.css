@@ -1,0 +1,274 @@
+*
+{   
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.background
+{
+    background-color: #222433;
+    width: 100%;
+    min-height: 5rem;
+    
+}
+
+.background4
+{
+    background-color: #222433;
+    width: 100%;
+    min-height: auto;
+    
+}
+
+.grid1
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 5rem;
+}
+
+.test 
+{   
+    grid-row-start: 1;
+    grid-column-start: 1;
+    display: grid; 
+}
+
+.test2
+{   
+    grid-row-start: 1;
+    grid-column-start: 2;
+    display: grid; 
+}
+
+i
+{
+    display: none;
+}
+
+.Left
+{
+    color: #FFF;
+    display: grid; 
+    place-items: end start;
+    font-size: calc(60% + 0.5rem);
+}
+
+.Left2
+{
+    color: #FFF;
+    display: grid; 
+    place-items: start;
+    font-size: calc(60% + 0.1rem);
+}
+
+.nav
+{
+    display: grid; 
+    place-items: center end;
+}
+
+.nav-item
+{
+    padding: 0 1rem;
+}
+
+
+.background2
+{
+    background-color: #2c2e42;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.background5
+{
+    background-color: #2c2e42;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.grid2
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+#map
+{
+    margin-top: 1rem;
+    width: 50rem;
+    height: 35rem;
+}
+
+.search
+{   
+    margin-top: 2rem;
+    width: 35rem; 
+    height: 2.5rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    border: none;
+
+}
+
+.grid3
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+.buttonLayout
+{    
+    margin: 0 9rem;
+    margin-top: 1rem;
+}
+
+.boxButton
+{
+    width: 13rem;
+}
+
+
+.container3
+{
+    width: 50rem;
+    margin: 0 auto;
+}
+.grid5
+{
+    display: grid; 
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto;
+    place-items: center;
+    column-gap: 2rem;
+    margin-top: 2rem;
+} 
+
+.buttext
+{   
+    
+    width: 8rem;
+    margin: 0 0rem;
+}
+
+.grid6
+{
+    display:grid; 
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    padding-bottom: 2rem;
+}
+.gridLeft
+{
+    display: grid;
+    grid-template-columns: 20%;
+    place-items: start;
+    margin-top: 1.2rem;
+}
+
+.gridRight
+{
+    display:grid;
+    grid-template-columns: auto;
+    place-items: end;
+}
+
+select 
+{
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition:  0.3s ease-in-out;
+}
+  
+select:focus 
+{
+    transition:  0.3s ease-in-out;
+    outline: none;
+    border-color: #007bff;
+}
+
+
+.grid-1
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+
+.textTest , .textLast
+{   
+    color: #0DCAF0; 
+    margin-top: 4rem;
+    font-size: calc(60% + 1rem);
+    font-weight: 600;
+}
+
+.textTest2 
+{   
+    color: #FFF;
+    margin-top: 1.3rem;
+    font-size: calc(60% + 0.4rem);
+    line-height: 3rem;
+}
+
+#namedamless30 , #namedammore30 , #namedamMore50 , #namedamMore80 , #namedamMore100 , #textRain
+{   
+    color: #FFF;
+    margin-top: 1.3rem;
+    font-size: calc(60% + 0.4rem);
+    line-height: 3rem;
+    margin-bottom: 5rem;
+}
+
+.grid-2
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+}
+
+.line
+{   
+    margin-top: 5rem;
+    background-color: #0DCAF0;
+    background-size: cover; 
+    width: 80%; 
+    min-height: 0.5vh;
+    border-radius: 1rem;
+}
+
+.background6
+{
+    background: rgb(32, 39, 80);
+    background: linear-gradient(180deg, #292b3f , rgb(37, 42, 69) 100%);
+    background-size: cover; 
+    width: 100%; 
+    height: auto;
+    padding-bottom: 4rem;
+}
+
+.gridLastCheck
+{
+    display: grid; 
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    
+}
+
+.infoLast
+{   
+    margin-top: 4rem;
+    color: #FFF;
+    display: grid; 
+    place-items: center start;
+    font-size: calc(60% + 0.6rem);
+}

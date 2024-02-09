@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /> 
+    <script type="text/javascript" src="https://api.longdo.com/map/?key=d3a7d94b8b1cf7d0682634c9c56ece61"></script> <!-- Longdo Map -->
+
+</head>
+<body onload=init()>
+    <!-- Script --> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> <!-- Jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Axios -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
+    <script src="../js/main.js"></script> 
+    <!-- แผนที่ -->
+
+    <div class="container mt-5"> 
+        <div class="card"> 
+            <div class="card-body mx-auto"> 
+                <div id="map" class="mt-4 mb-4" style="width: 600px; height: 400px;"></div> 
+            </div>
+        </div>
+    </div> 
+    <select id ="province">
+        <option value="Default">ทุกจังหวัด</option>
+        <optgroup label="ภาคเหนือ" id="ภาคเหนือ" class="province-group">
+            <option value="เชียงใหม่">เชียงใหม่</option>
+            <option value="ตาก">ตาก</option>
+            <option value="พิษณุโลก">พิษณุโลก</option>
+            <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+            <option value="ลำปาง">ลำปาง</option>
+        </optgroup>
+        <optgroup label="ภาคตะวันออกเฉียงเหนือ" id="ภาคตะวันออกเฉียงเหนือ" class="province-group">
+            <option value="อุดรธานี">อุดรธานี</option>
+            <option value="สกลนคร">สกลนคร</option>
+            <option value="กาฬสินธุ์">กาฬสินธุ์</option>
+            <option value="นครราชสีมา">นครราชสีมา</option>
+            <option value="บุรีรัมย์">บุรีรัมย์</option>
+            <option value="ขอนแก่น">ขอนแก่น</option>
+            <option value="อุบลราชธานี">อุบลราชธานี</option>
+            <option value="ชัยภูมิ">ชัยภูมิ</option>
+        </optgroup>
+        <optgroup label="ภาคกลาง" id="ภาคกลาง" class="province-group">
+            <option value="ลพบุรี">ลพบุรี</option>
+            <option value="อุทัยธานี">อุทัยธานี</option>
+            <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+        </optgroup>
+        <optgroup label="ภาคตะวันตก" id="ภาคตะวันตก" class="province-group">
+            <option value="กาญจนบุรี">กาญจนบุรี</option>
+        </optgroup>
+        <optgroup label="ภาคตะวันออก" id="ภาคตะวันออก" class="province-group">
+            <option value="ชลบุรี">ชลบุรี</option>
+            <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+            <option value="นครนายก">นครนายก</option>
+            <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+            <option value="ระยอง">ระยอง</option>
+        </optgroup>
+        <optgroup label="ภาคใต้" id="ภาคใต้" class="province-group" >
+            <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+            <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+            <option value="ยะลา">ยะลา</option>
+            <option value="เพชรบุรี">เพชรบุรี</option>
+        </optgroup>
+    </select>
+    <select id="region" onchange="updateProvinces()">
+        <option value="Default">ทุกภาค</option>
+        <option value="ภาคเหนือ">ภาคเหนือ</option>
+        <option value="ภาคตะวันออกเฉียงเหนือ">ภาคตะวันออกเฉียงเหนือ</option>
+        <option value="ภาคกลาง">ภาคกลาง</option>
+        <option value="ภาคตะวันตก">ภาคตะวันตก</option>
+        <option value="ภาคตะวันออก">ภาคตะวันออก</option>
+        <option value="ภาคใต้">ภาคใต้</option>
+    </select>
+    
+
+
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WaterFall isn't return | ข้อมูลเขื่อนกักเก็บน้ำต่าง ๆ</title>
+
+  <link rel="stylesheet" href="..\css\map.css" />
+  <link rel="stylesheet" href="..\css\respontiveMap.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://api.longdo.com/map/?key=94acfc0b4c7d2e1ce51c0d0913c6810c"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body onload=init();> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <div class = "background"> 
+        <div class = "container" data-aos="zoom-in" data-aos-duration="1000">
+            <div class = "grid1">
+                <div class = "test"> 
+                    <div class = "Left">WaterFall isn't return</div>
+                    <div class = "Left2">• Bangkok University</div>
+                </div>
+
+                <div class = "test2">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="main">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="dam">Dam</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="map" >Radar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inquire">Inquire</a>
+                          </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact">Contact</a>
+                          </li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "background2">
+        <div class = "container"> 
+            <div class = "grid3"> 
+                <input type="text" id = "searchdam"placeholder="ชื่อเขื่อน ex. เขื่อนขุนด่านปราการชล" name="search" class = "search">
+            </div>
+            <div class = "grid3"> 
+                <div class = "buttonLayout"> 
+                    <button id="confirm" type="button" class="btn btn-primary boxButton">ยืนยัน</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class = "container">
+            <div class = "grid2"> 
+                <div id="map"></div> 
+            </div>
+        </div>
+        <div class = "container3">
+            
+
+            <div class = "grid6"> 
+                <div class = "gridLeft">
+                    <select name="location" id="location">
+                        <option value="Default">ทุกจังหวัด</option>
+                        <optgroup label="ภาคเหนือ" id="ภาคเหนือ" class="province-group">
+                            <option value="เชียงใหม่">เชียงใหม่</option>
+                            <option value="ตาก">ตาก</option>
+                            <option value="พิษณุโลก">พิษณุโลก</option>
+                            <option value="อุตรดิตถ์">อุตรดิตถ์</option>
+                            <option value="ลำปาง">ลำปาง</option>
+                        </optgroup>
+                        <optgroup label="ภาคตะวันออกเฉียงเหนือ" id="ภาคตะวันออกเฉียงเหนือ" class="province-group">
+                            <option value="อุดรธานี">อุดรธานี</option>
+                            <option value="สกลนคร">สกลนคร</option>
+                            <option value="กาฬสินธุ์">กาฬสินธุ์</option>
+                            <option value="นครราชสีมา">นครราชสีมา</option>
+                            <option value="บุรีรัมย์">บุรีรัมย์</option>
+                            <option value="ขอนแก่น">ขอนแก่น</option>
+                            <option value="อุบลราชธานี">อุบลราชธานี</option>
+                            <option value="ชัยภูมิ">ชัยภูมิ</option>
+                        </optgroup>
+                        <optgroup label="ภาคกลาง" id="ภาคกลาง" class="province-group">
+                            <option value="ลพบุรี">ลพบุรี</option>
+                            <option value="อุทัยธานี">อุทัยธานี</option>
+                            <option value="สุพรรณบุรี">สุพรรณบุรี</option>
+                        </optgroup>
+                        <optgroup label="ภาคตะวันตก" id="ภาคตะวันตก" class="province-group">
+                            <option value="กาญจนบุรี">กาญจนบุรี</option>
+                        </optgroup>
+                        <optgroup label="ภาคตะวันออก" id="ภาคตะวันออก" class="province-group">
+                            <option value="ชลบุรี">ชลบุรี</option>
+                            <option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+                            <option value="นครนายก">นครนายก</option>
+                            <option value="ปราจีนบุรี">ปราจีนบุรี</option>
+                            <option value="ระยอง">ระยอง</option>
+                        </optgroup>
+                        <optgroup label="ภาคใต้" id="ภาคใต้" class="province-group" >
+                            <option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+                            <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+                            <option value="ยะลา">ยะลา</option>
+                            <option value="เพชรบุรี">เพชรบุรี</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class = "gridRight">
+                    <select name="check" id="check" onchange="updateProvinces()">
+                    <option value="Default">ทุกภาค</option>
+                    <option value="ภาคเหนือ">ภาคเหนือ</option>
+                    <option value="ภาคตะวันออกเฉียงเหนือ">ภาคตะวันออกเฉียงเหนือ</option>
+                    <option value="ภาคกลาง">ภาคกลาง</option>
+                    <option value="ภาคตะวันตก">ภาคตะวันตก</option>
+                    <option value="ภาคตะวันออก">ภาคตะวันออก</option>
+                    <option value="ภาคใต้">ภาคใต้</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "background4">
+        <div class = "container">
+            <div class = "grid-1">
+                <div class = "textTest" style = "color: #0DCAF0;">ระดับน้ำเขื่อนน้อยกว่าหรือเท่ากับ 30% ของเขื่อน</div>
+                <div class = "textTest2">• 
+                    เมื่อกล่าวถึง "ระดับน้ำเขื่อนน้อยกว่าหรือเท่ากับ 30% ของเขื่อน" นั้นหมายความว่าปริมาณน้ำที่เก็บในเขื่อนนั้นอยู่ในช่วงที่น้อยที่สุดหรือเท่ากับ 30% ของความจุทั้งหมดของเขื่อนนั้น ๆ 
+                    เมื่อระดับน้ำลดลงมาต่ำกว่าหรือเท่ากับ 30%, นักวิเคราะห์หรือเจ้าหน้าที่ดูแลเขื่อนอาจต้องดูแลระบบอย่างใกล้ชิดเพื่อป้องกันปัญหาที่อาจเกิดขึ้นเนื่องจากระดับน้ำที่ต่ำลง, 
+                    เช่น การควบคุมการปล่อยน้ำ, การตรวจสอบโครงสร้าง, และการเตรียมความพร้อมในกรณีฉุกเฉิน. การทำงานนี้ช่วยให้มั่นใจได้ว่าการจัดการน้ำในเขื่อนถูกดำเนินอย่างมีประสิทธิภาพ
+                    และปลอดภัย.
+                </div>
+                <div class = "textTest" style = "color: #0DCAF0;">เขื่อนที่มีปริมาณน้ำน้อยกว่าหรือเท่ากับ 30% ของเขื่อน</div>
+                <div id = "namedamless30"></div>
+            </div>
+
+            
+            <div class = "grid-1">
+                <div class = "textTest" style = "color: #0D6EFD;">ระดับน้ำเขื่อนอยู่ในระหว่าง 31% - 50% ของเขื่อน</div>
+                <div class = "textTest2">• 
+                    การควบคุมระดับน้ำในเขื่อนมีผลมากทั้งต่อผู้ใช้น้ำและสิ่งแวดล้อมที่ตั้งรอบ ๆ เขื่อนนั้น ๆ ซึ่งการระบายน้ำในระดับที่อยู่ระหว่าง 31% - 50% ของความจุของเขื่อนนั้น
+                    มีผลให้การระบายน้ำในระดับที่มีความจุอยู่ในช่วง 31% - 50% ของเขื่อนมีประโยชน์ต่อการเกษตรในพื้นที่นั้น ๆ โดยช่วยให้เกษตรกรสามารถจัดการระบบการเพาะปลูกได้อย่างมีประสิทธิภาพ
+                </div>
+                <div class = "textTest" style = "color: #0D6EFD;">เขื่อนที่มีปริมาณน้ำอยู่ในระหว่าง 31% - 50% ของเขื่อน</div>
+                <div id = "namedammore30"></div>
+            </div>
+
+            <div class = "grid-1">
+                <div class = "textTest" style = "color: #198754;">ระดับน้ำเขื่อนอยู่ในระหว่าง 51% - 80% ของเขื่อน</div>
+                <div class = "textTest2">• 
+                    การควบคุมระดับน้ำในเขื่อนมีผลมากทั้งต่อผู้ใช้น้ำและสิ่งแวดล้อมที่ตั้งรอบ ๆ เขื่อนนั้น ๆ ซึ่งการระบายน้ำในระดับที่อยู่ระหว่าง 51% - 80% ของความจุของเขื่อนนั้น
+                    อาจส่งผลให้เกิดการระบายน้ำในปริมาณมากอาจมีผลกระทบต่อชุมชนที่ขึ้นอยู่กับน้ำใต้ดิน ซึ่งทำให้มีความเสี่ยงในการลดปริมาณน้ำใต้ดินที่เข้าถึงได้
+                </div>
+                <div class = "textTest" style = "color: #198754;">เขื่อนที่มีปริมาณน้ำอยู่ในระหว่าง 51% - 80% ของเขื่อน</div>
+                <div id = "namedamMore50"></div>
+            </div>
+
+            <div class = "grid-1">
+                <div class = "textTest" style = "color: #FFC107;">ระดับน้ำเขื่อนอยู่ในระหว่าง 81% - 100% ของเขื่อน</div>
+                <div class = "textTest2">• 
+                    การควบคุมระดับน้ำในเขื่อนมีผลมากทั้งต่อผู้ใช้น้ำและสิ่งแวดล้อมที่ตั้งรอบ ๆ เขื่อนนั้น ๆ ซึ่งการระบายน้ำในระดับที่อยู่ระหว่าง 81% - 100% ของความจุของเขื่อนนั้น
+                    อาจส่งผลให้เกิดการระบายน้ำในปริมาณมากๆ ซึ่งอาจส่งผลให้เกิดความเสียหายจากน้ำท่วมในพื้นที่รอบๆ เขื่อน และอาจมีผลกระทบต่อชุมชนและสิ่งแวดล้อม
+                </div>
+                <div class = "textTest" style = "color: #FFC107;">เขื่อนที่มีปริมาณน้ำอยู่ในระหว่าง 81% - 100% ของเขื่อน</div>
+                <div id = "namedamMore80"></div>
+            </div>
+
+            <div class = "grid-1">
+                <div class = "textTest" style = "color: #DC3545;">ระดับน้ำเขื่อนที่มากกว่า 100% ของเขื่อน</div>
+                <div class = "textTest2">• 
+                    การเกินของระดับน้ำที่เขื่อนสามารถทำให้เกิดความกดทับที่สูงขึ้นที่โครงสร้างของเขื่อน ทำให้เกิดความเสียหายหรือทำลายโครงสร้างได้ เป็นไปได้ว่าจะเกิดปัญหาทางโครงสร้างที่ทำให้เขื่อนสามารถพลัดถิ่นหรือแตกสลายได้ 
+                    ทำให้เกิดน้ำท่วมและความเสียหายในพื้นที่รอบๆ เขื่อน และเมื่อ เมื่อระดับน้ำเพิ่มขึ้น, น้ำอาจไหลล้นออกจากเขื่อนและท่วมถึงพื้นที่รอบๆ เขื่อน นี้สามารถทำให้เกิดความเสียหายและสูญเสียทรัพยากรที่อยู่ในพื้นที่นั้น
+                </div>
+                <div class = "textTest" style = "color: #DC3545;">เขื่อนที่มีปริมาณน้ำที่มากกว่า 100% ของเขื่อน</div>
+                <div id = "namedamMore100"></div>
+            </div>
+
+        </div>  
+    </div>
+
+
+    <div class = "background5">
+        <div class = "container"> 
+            <div class = "grid-2">
+                <div class = "line"></div>
+                <div class = "textLast" style = "color: #DC3545;">พื้นที่ที่เสี่ยงต่ออุทกภัยทั้งรุนแรงน้อยและรุนแรงมาก</div>
+                <div id = "textRain"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "background6">
+        <div class = "container"> 
+            <div class = "gridLastCheck">
+                <div class = "infoLast">WaterFall isn't return By Student in Bangkok University </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/changePP.js"></script> 
+    <script src="../js/main.js"></script> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
