@@ -36,7 +36,6 @@ npm install
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 OPENWEATHER_API_KEY=your_api_key
-THAIWATER_API_KEY=your_api_key
 
 4. Run the Server
 npm start
