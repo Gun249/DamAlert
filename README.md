@@ -1,43 +1,43 @@
-#  DamAlert - ระบบแจ้งเตือนระดับน้ำในเขื่อนแบบเรียลไทม์ 🌊
+# DamAlert - Real-time Dam Water Level Monitoring System
 
-DamAlert เป็นระบบที่ช่วยแจ้งเตือนประชาชนเกี่ยวกับระดับน้ำในเขื่อนแบบ **Real-time**  
-เมื่อระดับน้ำถึงจุดวิกฤติ ระบบจะแสดงการแจ้งเตือนเพื่อให้ประชาชนเตรียมตัวรับมือกับสถานการณ์น้ำท่วมที่อาจเกิดขึ้น  
+## Overview
+DamAlert is a real-time monitoring system designed to provide timely alerts regarding dam water levels. The system helps inform residents and authorities when water levels reach critical thresholds, allowing for early evacuation and flood preparedness.
 
----
+## Features
+- **Real-time tracking** of water levels across multiple dams.
+- **Interactive map** displaying dam locations and current water levels.
+- **Automated alerts** when water levels exceed critical thresholds.
+- **User-friendly interface** with EJS templating and Bootstrap styling.
+- **API integration** with OpenWeather API
+- **REST API support** for external data access.
 
-## ** Features (คุณสมบัติหลัก)**
-✅ ตรวจสอบระดับน้ำในเขื่อนทั่วประเทศ  
-✅ แสดงแผนที่แบบ Interactive พร้อมตำแหน่งเขื่อนและระดับน้ำ  
-✅ แจ้งเตือนเมื่อระดับน้ำถึงจุดวิกฤติ  
-✅ เชื่อมต่อกับ **OpenWeather API** 
-✅ รองรับ **REST API** สำหรับเรียกข้อมูล  
+## Tech Stack
+### **Frontend**
+- **Templating Engine:** EJS (Embedded JavaScript)
+- **CSS Framework:** Bootstrap 5
 
----
+### **Backend**
+- **Server:** Node.js, Express.js
+- **Database:** MongoDB
+- **API Integration:** OpenWeather API
+- **Development Tools:** Git, Postman
 
-## **🛠 Tech Stack (เทคโนโลยีที่ใช้)**
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB  
-- **API Integration:** OpenWeather API, ThaiWater API  
-- **Other Tools:** Git, Postman, Docker (ถ้ามีนายใช้)  
-
----
-
-## ** Getting Started (เริ่มต้นใช้งาน)**  
-
-### **1️ Clone Repository**
+## Getting Started
 ```bash
+1. Clone the Repository
+
 git clone https://github.com/Gun249/DamAlert.git
 cd DamAlert
 
-2. ติดตั้ง Dependencies
+2. Install Dependencies
 npm install
 
-3. ตั้งค่าไฟล์ .env
+3.Configure Environment Variables
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 OPENWEATHER_API_KEY=your_api_key
 THAIWATER_API_KEY=your_api_key
 
-รันเซิร์ฟเวอร์
+4. Run the Server
 npm start
 
