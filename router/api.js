@@ -3,7 +3,7 @@ const router = express.Router();
 const axios = require('axios'); // ใช้ axios ในการดึงข้อมูลจาก api
 const fs = require('fs'); // ใช้ fs ในการอ่านไฟล์
 const {weather} = require('../models/Weather');
-const appid = '66ee8028f68dfce6f42f1552564adc11';
+const appid = process.env.weatherapikey;
 const cron = require('node-cron');
 
 

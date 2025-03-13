@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WaterFall isn't return | ข้อมูลเขื่อนกักเก็บน้ำต่าง ๆ</title>
+  <title>DamAlert | ข้อมูลเขื่อนกักเก็บน้ำต่าง ๆ</title>
 
   <link rel="stylesheet" href="..\css\in.css" />
   <link rel="stylesheet" href="..\css\respontiveCon.css" />
@@ -22,7 +22,7 @@
         <div class = "container" data-aos="zoom-in" data-aos-duration="1000">
             <div class = "grid1" >
                 <div class = "test"> 
-                    <div class = "Left">WaterFall isn't return</div>
+                    <div class = "Left">DamAlert</div>
                     <div class = "Left2">• Bangkok University</div>
                 </div>
 
@@ -35,7 +35,7 @@
                         <a class="nav-link" href="dam" >Dam</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="map" >Radar</a>
+                        <a class="nav-link" href="map" >Map</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="inquire">Inquire</a>
@@ -57,26 +57,38 @@
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            เราจะรู้ข้อมูลเขื่อนได้จากหน้าไหน ?
-                        </button>
+                          เราจะรู้ข้อมูลเขื่อนได้จากหน้าไหน ?
+                      </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>ในเมนูที่มีชื่อว่า Dam</strong> จะมีข้อมูลเขื่อนมากมายเกี่ยวกับปริมาณภายในเขื่อนไม่ว่าจะเป็น ปริมาณน้ำและรายละเอียดมากมาย รวมถึงชื่อเจ้าของและพื้นที่บริเวณรอบข้าง
-                        </div>
+                          <div class="accordion-body">
+                              <p><strong>คุณสามารถดูข้อมูลเกี่ยวกับเขื่อนได้จากเมนู "<b>Dam</b>"</strong> ซึ่งอยู่บนแถบเมนูหลักของเว็บไซต์</p>
+                              <p>ในหน้านี้ คุณจะพบข้อมูลสำคัญเกี่ยวกับแต่ละเขื่อน เช่น:</p>
+                              <ul>
+                                  <li>ปริมาณน้ำปัจจุบันภายในเขื่อน</li>
+                                  <li>ปริมาณน้ำสูงสุดที่สามารถกักเก็บได้</li>
+                                  <li>รายละเอียดเกี่ยวกับการระบายน้ำ</li>
+                                  <li>ชื่อเจ้าของและหน่วยงานที่รับผิดชอบ</li>
+                                  <li>ข้อมูลพื้นที่โดยรอบเขื่อน</li>
+                              </ul>
+                              <p>ข้อมูลทั้งหมดนี้ช่วยให้คุณสามารถติดตามสถานการณ์น้ำในเขื่อนได้อย่างแม่นยำ และเตรียมรับมือกับสถานการณ์ที่อาจเกิดขึ้น</p>
+                          </div>
                       </div>
+                      
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Map อยู่ที่หน้าไหน ?
+                            Map อยู่ที่หน้าไหน ?
                         </button>
-                      </h2>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          <strong>ในเมนูที่มีชื่อว่า Radar</strong> 
+                            <p><strong>คุณสามารถเข้าถึงแผนที่ (Map) ได้จากเมนูหลัก</strong> โดยเลือกเมนูที่มีชื่อว่า "<b>Map</b>" บนแถบ Navigation ด้านบนของเว็บไซต์</p>
+                            <p>เมื่อเข้าไปแล้ว คุณจะสามารถดูตำแหน่งของเขื่อน พร้อมทั้งข้อมูลระดับน้ำในแต่ละพื้นที่ได้แบบเรียลไทม์</p>
                         </div>
-                      </div>
+                    </div>
+                    
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingThree">
@@ -86,24 +98,35 @@
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                          Map จะสามารถดูข้อมูลได้อย่างเต็มที่ โดยจะค้นหาจากภูมิภาคและจังหวัดที่จะแสดงเขื่อนในแต่ละพื้นที่นั้น ๆ รวมไปถึงจะมีข้อมูลที่บอกว่า 
-                          ปริมาณน้ำเขื่อนมีมากถึงเท่าไหร่ในแต่ละเขื่อน โดยมีบอกประมาณถึง <=30% , 31% - 50% , 51% - 80% , 81% - 100% , >= 100% 
-                        </div>
+                          ผู้ใช้สามารถใช้ Map เพื่อดูข้อมูลระดับน้ำในเขื่อนตามภูมิภาคหรือจังหวัดที่สนใจได้โดยละเอียด<br><br>
+                          โดยระบบจะแสดงตำแหน่งของเขื่อนแต่ละแห่ง พร้อมข้อมูลปริมาณน้ำปัจจุบัน แบ่งออกเป็นช่วงดังนี้:<br><br>
+                          ≤ 30% : ระดับน้ำอยู่ในเกณฑ์ต่ำ<br>
+                          31% - 50% : ระดับน้ำปานกลาง<br>
+                          51% - 80% : ระดับน้ำอยู่ในช่วงสูง<br>
+                          81% - 100% : ระดับน้ำใกล้เต็มความจุ<br>
+                          ≥ 100% : ระดับน้ำเกินความจุ อาจมีการระบายน้ำ<br><br>
+                          ระบบช่วยให้ผู้ใช้สามารถติดตามสถานการณ์น้ำในเขื่อนได้แบบ <b>เรียลไทม์</b> 
+                          เพื่อให้สามารถวางแผนและรับมือกับสถานการณ์น้ำท่วมได้อย่างทันท่วงที  
+                      </div>
+                      
                       </div>
                     </div>
 
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                              เราจะดูข้อมูลน้ำท่วมได้จากไหนบ้าง ?
-                          </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            จากหน้าที่มีชื่อว่า Radar หลังจากที่บอกข้อมูล Map คุณยังสามารถเข้าไปดูถึงข้อมูลน้ำท่วมได้ด้วย โดยจะแสดงเป็นพื้นที่จังหวัดต่าง ๆ หากมีน้ำท่วม จะก่อให้เกิดการแจ้งเตือนได้ เด้งขึ้นมาในหน้า Radar
-                            ซึ่งถ้าหากยังไม่มีพื้นที่น้ำท่วม จะไม่มีข้อมูลแสดงขึ้นมา
-                          </div>
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            เราจะดูข้อมูลน้ำท่วมได้จากไหนบ้าง ?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><strong>คุณสามารถดูข้อมูลสถานการณ์น้ำท่วมได้จากเมนู "<b>Map</b>"</strong></p>
+                            <p>นอกจากการแสดงตำแหน่งเขื่อนและระดับน้ำแล้ว หน้านี้ยังสามารถแสดงข้อมูลเกี่ยวกับพื้นที่ที่ได้รับผลกระทบจากน้ำท่วมในแต่ละจังหวัด</p>
+                            <p>ระบบจะแสดงพื้นที่ที่เกิดน้ำท่วม พร้อมกับการแจ้งเตือนแบบเรียลไทม์ หากยังไม่มีเหตุการณ์น้ำท่วมเกิดขึ้น ข้อมูลจะแสดงเป็นสถานะปกติ</p>
+                            <p>คุณสามารถใช้ข้อมูลนี้เพื่อเฝ้าระวังและเตรียมพร้อมรับมือกับสถานการณ์ฉุกเฉินที่อาจเกิดขึ้นได้</p>
                         </div>
+                    </div>
+                    
                       </div>
 
                   </div>

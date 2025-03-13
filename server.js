@@ -3,16 +3,16 @@ const axios = require('axios');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const fs = require('fs/promises');
+require('dotenv').config();
 
 const jsonFilePath = 'json/weather-data.json';
-const appid = '66ee8028f68dfce6f42f1552564adc11';
 const mongoose = require('mongoose');
 app.set('view engine', 'ejs');
 const {weather} = require('./models/Weather');
 
-mongoose.connect("mongodb+srv://Gun:004823zx@flood.6dgc2cv.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect(process.env.mongoapikey);
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
